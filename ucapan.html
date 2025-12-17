@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Selamat Tidur Sayang</title>
+
+<style>
+body {
+    margin: 0;
+    background: linear-gradient(180deg, #0b1c2d, #000);
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+}
+
+/* Container */
+.container {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+
+/* Judul */
+h1 {
+    color: #ffb6c1;
+    font-size: 36px;
+    animation: glow 2s infinite alternate;
+}
+
+/* Teks */
+.text {
+    font-size: 20px;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+    animation: naik 14s linear infinite;
+}
+
+/* Animasi */
+@keyframes naik {
+    from { transform: translateY(100%); opacity: 0; }
+    to { transform: translateY(-130%); opacity: 1; }
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px pink; }
+    to { text-shadow: 0 0 20px hotpink; }
+}
+
+/* Tombol musik */
+.music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: pink;
+    color: black;
+    padding: 12px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 10px pink;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- AUDIO -->
+<audio id="musik" loop>
+    <source src="ucapan.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Tombol -->
+<div class="music-btn" onclick="playMusic()">
+    🎵 Putar Musik
+</div>
+
+<div class="container">
+    <h1>🌙 Selamat Tidur Sayangku 💕</h1>
+
+    <div class="text">
+        Malam ini mungkin terasa sunyi,  
+        tapi hatiku penuh karena kamu.  
+        <br><br>
+        Terima kasih sudah hadir  
+        dan membuat hariku lebih berarti.  
+        <br><br>
+        Pejamkan mata dengan tenang ya,  
+        lepaskan semua lelahmu.  
+        <br><br>
+        Semoga mimpimu indah,  
+        dan aku selalu ada di dalamnya.  
+        <br><br>
+        Selamat tidur cintaku 🤍  
+        Aku sayang kamu, selalu 💖
+    </div>
+</div>
+
+<script>
+function playMusic() {
+    const musik = document.getElementById("musik");
+    musik.play();
+}
+</script>
+
+</body>
+</html>
